@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+html{
+    min-width: 375px;
+    max-width: 1900vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin-top: 3em;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 12em;
+}
+
+.contents img{
+    width: 3em;
+}
+
+.contents h1{
+    font-size: 1.34em;
+    font-weight: 500;
+    color: hsl(0, 0%, 59%);
+}
+
+.contents p{
+    font-size: 0.8em;
+    color:hsl(207, 30%, 7%);
+}
+
+.validation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 5em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents strong{
+    color:hsl(209, 33%, 12%);
+}
+
+.contents input{
+    width: 20em;
+    height: 2.5em;
+    border-radius: 100px;
+    border: solid 1pt hsl(223, 87%, 63%);
+    padding: 1em;
+}
+
+.contents input::placeholder{
+    text-align: start;
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.contents button{
+    width: 20em;
+    height: 2.5em;
+    border-radius: 100px;
+    background-color: hsl(223, 87%, 63%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.contents button:disabled{
+    background-color:hsl(210, 44%, 10%);
+    
+}
+
+
+#dash{
+    max-width: 22em;
+    max-height: 28em;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 4em;
+    justify-content: space-between;
+}
+
+.icon-contents{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+    color: hsl(223, 87%, 63%);
+    gap: 1em;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: solid 1pt hsla(0, 0%, 59%, 0.4);
+    border-radius: 50px;
+}
+
+.footer span{
+    color: hsla(0, 0%, 59%, 1);
+    font-size: 0.7em;
+}
+
+
+/* Active state notification */
+
+
+.emailConfirm{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 1.5em;
+    text-align: center;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    border-bottom: solid 4pt rgb(50, 150, 250);
+
+}
+
+.emailConfirm span {
+    letter-spacing: 0.2pt;
+    font-weight: 500;
+    font-size: 0.65em;
+    margin-right:0.2em;
+}
+.emailConfirm i {
+    font-size: 0.6em;
+}
+.emailConfirm .underline{
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(166, 207, 248);
+    animation-name: move;
+    animation-duration: 4s;
+}
+
+.active{
+    display: none;
+}
+
+
+@keyframes move{
+    /*DE 100*/ from {width: 100%;}
+    /*Para 0*/ to{ width: 0%;}
+ }
+
+
+@media screen and (min-width:700px) {
+    .validation{
+        width: 35em;
+        flex-direction: row;
+    }
+    .contents input{
+        border: solid 1pt hsl(0, 0%, 59%);
+    }
+    .contents img{
+        width: 4em;
+    }
+    #dash{
+        width: 100%;
+        height: 15em;
+    }
+}
+
