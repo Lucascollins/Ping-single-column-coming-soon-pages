@@ -15,12 +15,14 @@ window.addEventListener('load',()=>{
             btn.addEventListener('click',(e)=>{
                 e.preventDefault()
                 reset(input,btn)
-                displayOn(emailConfirm)})
+                displayOn(emailConfirm)
+                setTimeout(() => noneDisplay(emailConfirm), 4000);
+            })   
         }
         if(validationForms == false){
             btn.disabled = true
         }
-        setTimeout(()=>noneDisplay(emailConfirm),4000)
+        
     })
 })
 
